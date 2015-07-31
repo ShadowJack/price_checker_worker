@@ -223,3 +223,12 @@ I, [2015-07-31T21:18:32.167148 #18857]  INFO : (0.033686s) INSERT INTO "prices" 
 I, [2015-07-31T21:18:32.630438 #18857]  INFO : (0.001158s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (37, 1824, '2015-07-31 21:18:32.629070+0300', '2015-07-31 21:18:32.629075+0300') RETURNING "id"
 I, [2015-07-31T21:18:33.591143 #18857]  INFO : (0.001270s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (38, 753, '2015-07-31 21:18:33.589614+0300', '2015-07-31 21:18:33.589621+0300') RETURNING "id"
 I, [2015-07-31T21:18:34.138541 #18857]  INFO : (0.001250s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (39, 559, '2015-07-31 21:18:34.137065+0300', '2015-07-31 21:18:34.137072+0300') RETURNING "id"
+I, [2015-07-31T21:41:19.315083 #19745]  INFO : (0.000263s) SET standard_conforming_strings = ON
+I, [2015-07-31T21:41:19.315406 #19745]  INFO : (0.000153s) SET client_min_messages = 'WARNING'
+I, [2015-07-31T21:41:19.315626 #19745]  INFO : (0.000155s) SET DateStyle = 'ISO'
+I, [2015-07-31T21:41:19.316480 #19745]  INFO : (0.000683s) SELECT * FROM "products"
+I, [2015-07-31T21:41:19.766735 #19745]  INFO : (0.001454s) SELECT pg_attribute.attname AS pk FROM pg_class, pg_attribute, pg_index, pg_namespace WHERE pg_class.oid = pg_attribute.attrelid AND pg_class.relnamespace = pg_namespace.oid AND pg_class.oid = pg_index.indrelid AND pg_index.indkey[0] = pg_attribute.attnum AND pg_index.indisprimary = 't' AND pg_class.oid = CAST(CAST('"prices"' AS regclass) AS oid)
+I, [2015-07-31T21:41:19.772632 #19745]  INFO : (0.005482s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (36, 868, '2015-07-31 21:41:19.765049+0300', '2015-07-31 21:41:19.765070+0300') RETURNING "id"
+I, [2015-07-31T21:41:20.411362 #19745]  INFO : (0.001203s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (37, 1824, '2015-07-31 21:41:20.409955+0300', '2015-07-31 21:41:20.409960+0300') RETURNING "id"
+I, [2015-07-31T21:41:21.654347 #19745]  INFO : (0.001170s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (38, 753, '2015-07-31 21:41:21.652980+0300', '2015-07-31 21:41:21.652985+0300') RETURNING "id"
+I, [2015-07-31T21:41:22.223657 #19745]  INFO : (0.001333s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (39, 559, '2015-07-31 21:41:22.222137+0300', '2015-07-31 21:41:22.222141+0300') RETURNING "id"

@@ -223,3 +223,12 @@ LINE 1: SELECT * FROM "products"
  INFO  db_logger : (0.001158s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (37, 1824, '2015-07-31 21:18:32.629070+0300', '2015-07-31 21:18:32.629075+0300') RETURNING "id"
  INFO  db_logger : (0.001270s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (38, 753, '2015-07-31 21:18:33.589614+0300', '2015-07-31 21:18:33.589621+0300') RETURNING "id"
  INFO  db_logger : (0.001250s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (39, 559, '2015-07-31 21:18:34.137065+0300', '2015-07-31 21:18:34.137072+0300') RETURNING "id"
+ INFO  db_logger : (0.000263s) SET standard_conforming_strings = ON
+ INFO  db_logger : (0.000153s) SET client_min_messages = 'WARNING'
+ INFO  db_logger : (0.000155s) SET DateStyle = 'ISO'
+ INFO  db_logger : (0.000683s) SELECT * FROM "products"
+ INFO  db_logger : (0.001454s) SELECT pg_attribute.attname AS pk FROM pg_class, pg_attribute, pg_index, pg_namespace WHERE pg_class.oid = pg_attribute.attrelid AND pg_class.relnamespace = pg_namespace.oid AND pg_class.oid = pg_index.indrelid AND pg_index.indkey[0] = pg_attribute.attnum AND pg_index.indisprimary = 't' AND pg_class.oid = CAST(CAST('"prices"' AS regclass) AS oid)
+ INFO  db_logger : (0.005482s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (36, 868, '2015-07-31 21:41:19.765049+0300', '2015-07-31 21:41:19.765070+0300') RETURNING "id"
+ INFO  db_logger : (0.001203s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (37, 1824, '2015-07-31 21:41:20.409955+0300', '2015-07-31 21:41:20.409960+0300') RETURNING "id"
+ INFO  db_logger : (0.001170s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (38, 753, '2015-07-31 21:41:21.652980+0300', '2015-07-31 21:41:21.652985+0300') RETURNING "id"
+ INFO  db_logger : (0.001333s) INSERT INTO "prices" ("product_id", "price", "created_at", "updated_at") VALUES (39, 559, '2015-07-31 21:41:22.222137+0300', '2015-07-31 21:41:22.222141+0300') RETURNING "id"

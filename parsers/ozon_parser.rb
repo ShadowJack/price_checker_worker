@@ -1,4 +1,4 @@
-require 'base_parser.rb'
+require_relative 'base_parser.rb'
 class OzonParser < BaseParser
   def self.get_description(page)
     page.search('.bContentColumn').css('h1[itemprop="name"]').children.first.content
