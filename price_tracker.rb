@@ -5,7 +5,21 @@ Bundler.require
 require_relative 'url_utils'
 Dir[File.dirname(__FILE__)  + '/parsers/*.rb'].each {|file| require file }
 
-DB = Sequel.postgres('PriceTracker_development', :user => 'shadowjack', :password => '', :host => 'localhost')
+if (ENV['RAILS_ENV'])
+  db_user = ENV['DB_USERNAME']
+  db_password = ENV['DB_PASSWORD']
+  db_host = ENV['DB_ADDRESS']
+else
+  db_user = 'shadowjack'
+  db_password = ''
+  db_host = 'localhost'
+end
+
+DB = Sequel.postgres(
+  'PriceTracker_development', 
+  :user => db_user, 
+  :password => db_password, 
+  :host => db_host)
 
 logger = Logging.logger('db_logger')
 logger.level = :info
